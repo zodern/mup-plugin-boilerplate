@@ -9,7 +9,7 @@ export function setup(api, nodemiral) {
   const list = nodemiral.taskList('Setup Wekan');
 
   list.executeScript('Setup Environment', {
-    script: api.resolvePath(__dirname, 'assets/setup.sh')
+    script: api.resolvePath(__dirname, 'assets/setup.sh'),
   });
 
   return api.runTaskList(list, sessions, { verbose: api.verbose });
@@ -23,8 +23,8 @@ export function start(api, nodemiral) {
   list.executeScript('Start Wekan', {
     script: api.resolvePath(__dirname, 'assets/start.sh'),
     vars: {
-      version: wekanConfig.version || 'latest'
-    }
+      version: wekanConfig.version || 'latest',
+    },
   });
 
   return api.runTaskList(list, sessions, { verbose: api.verbose });
@@ -35,7 +35,7 @@ export function stop(api, nodemiral) {
   const list = nodemiral.taskList('Stop Wekan');
 
   list.executeScript('Stop Wekan', {
-    script: api.resolvePath(__dirname, 'assets/stop.sh')
+    script: api.resolvePath(__dirname, 'assets/stop.sh'),
   });
 
   return api.runTaskList(list, sessions, { verbose: api.verbose });

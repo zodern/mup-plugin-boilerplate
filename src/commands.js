@@ -2,17 +2,17 @@ import * as handlers from './command-handlers';
 
 export const setup = {
   description: 'Prepare server to run Wekan',
-  handler: handlers.setup
+  handler: handlers.setup,
 };
 
 export const start = {
   description: 'Start Wekan',
-  handler: handlers.start
+  handler: handlers.start,
 };
 
 export const stop = {
   description: 'Stop Wekan',
-  handler: handlers.stop
+  handler: handlers.stop,
 };
 
 export const logs = {
@@ -24,13 +24,13 @@ export const logs = {
       .option('tail', {
         description: 'Number of lines to show from the end of the logs',
         alias: 't',
-        number: true
+        number: true,
       })
       .option('follow', {
         description: 'Follow log output',
         alias: 'f',
-        boolean: true
+        boolean: true,
       });
   },
-  handler: handlers.logs
+  handler: handlers.logs,
 };

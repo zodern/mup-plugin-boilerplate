@@ -7,23 +7,23 @@ export const description = 'Setup a Wekan instance on your server';
 export const commands = _commands;
 
 export const validate = {
-  wekan: validator
+  wekan: validator,
 };
 
-function onlyWekanEnabled(...commands) {
-  return function(api) {
+function onlyWekanEnabled(...commandList) {
+  return function run(api) {
     if (api.getConfig().wekan) {
-      let promise = api.runCommand(commands.shift());
+      const promise = api.runCommand(commandList.shift());
 
-      commands.forEach(command => {
+      commandList.forEach((command) => {
         promise.then(() => api.runCommand(command));
       });
 
       return promise;
     }
-  }
+  };
 }
 
 export const hooks = {
-  'post.default.setup': onlyWekanEnabled('wekan.setup', 'wekan.start')
-}
+  'post.default.setup': onlyWekanEnabled('wekan.setup', 'wekan.start'),
+};
