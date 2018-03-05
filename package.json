@@ -4,6 +4,7 @@
   "description": "Boilerplate for Meteor Up plugins",
   "main": "index.js",
   "scripts": {
+    "prepare": "npm run build",
     "build": "babel src --out-dir lib --sourceRoot=./ --copy-files --sourcemaps",
     "build:watch": "npm run build -s -- -w",
     "lint": "eslint .",
@@ -11,6 +12,10 @@
   },
   "author": "zodern",
   "license": "MIT",
+  "keywords": [
+    "meteor-up"
+  ],
+  "main": "index.js",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
