@@ -1,6 +1,6 @@
 # Boilerplate for Meteor Up Plugins
 
-Learn how to create plugins from the [meteor up docs](http://meteor-up.com/docs#creating-a-plugin).
+Learn how to create plugins from the [Meteor Up docs](http://meteor-up.com/plugins.html#creating-a-plugin).
 
 ### Folders:
 
