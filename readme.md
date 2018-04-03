@@ -17,3 +17,14 @@ Learn how to create plugins from the [Meteor Up docs](http://meteor-up.com/plugi
 
 `npm run build:watch` Same as the `build` script, but will watch for files that change and regenerate them
 
+### Getting Started
+
+Run the commands:
+```
+git clone https://github.com/zodern/mup-plugin-boilerplate.git <plugin name>
+cd <plugin name>
+rm -rf .git
+git init
+```
+
+Next, you will want to change name and description in package.json and `src/index`
